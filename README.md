@@ -6,9 +6,7 @@ This toolchain targets the AArch32, AArch64, and x86 architectures. It is built 
 
 [binutils](https://www.gnu.org/software/binutils/) is also included for convenience. Unlike LLVM, however, the latest **stable** version of binutils is always used to reduce the opportunity for breakage because this project is primarily focused on cutting-edge Clang, not binutils. This means that **users do not need to download separate GCC toolchains** to build the Linux kernel.
 
-Automated builds occur weekly at 3 PM PST on every Saturday using fresh sources from the [LLVM Git monorepo](https://github.com/llvm/llvm-project). If any part of the builds fail, this repository will not be updated. The build scripts (powered by [tc-build](https://github.com/ClangBuiltLinux/tc-build)) behind this can be found [here](https://github.com/kdrag0n/proton-clang-build).
-
-Build notifications and other information can be obtained from the [Telegram channel](https://t.me/proton_clang).
+Automated builds occur weekly at 3 PM PST on every Saturday using fresh sources from the [LLVM Git monorepo](https://github.com/llvm/llvm-project). If any part of the builds fail, this repository will not be updated. The build scripts (powered by [tc-build](https://github.com/ClangBuiltLinux/tc-build))
 
 ## Host compatibility
 
@@ -19,7 +17,7 @@ This toolchain is built on Ubuntu 18.04 LTS, which uses glibc 2.27. Compatibilit
 Make sure you have this toolchain in your `PATH`:
 
 ```bash
-export PATH="$HOME/toolchains/proton-clang/bin:$PATH"
+export PATH="$HOME/toolchains/Fire-clang/bin:$PATH"
 ```
 
 For an AArch64 cross-compilation setup, you must set the following variables. Some of them can be environment variables, but some must be passed directly to `make` as a command-line argument. It is recommended to pass **all** of them as `make` arguments to avoid confusing errors:
