@@ -1,4 +1,4 @@
-# Fire-clang
+# Venom-clang
 
 This is a [LLVM](https://llvm.org/) and [Clang](https://clang.llvm.org/) compiler toolchain built for kernel development. Builds are always made from the latest LLVM sources rather than stable releases, so complete stability cannot be guaranteed.
 
@@ -17,7 +17,7 @@ This toolchain is built on Ubuntu 18.04 LTS, which uses glibc 2.27. Compatibilit
 Make sure you have this toolchain in your `PATH`:
 
 ```bash
-export PATH="$HOME/toolchains/Fire-clang/bin:$PATH"
+export PATH="$HOME/toolchains/venom-clang/bin:$PATH"
 ```
 
 For an AArch64 cross-compilation setup, you must set the following variables. Some of them can be environment variables, but some must be passed directly to `make` as a command-line argument. It is recommended to pass **all** of them as `make` arguments to avoid confusing errors:
