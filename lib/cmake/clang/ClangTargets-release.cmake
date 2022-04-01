@@ -145,6 +145,16 @@ set_target_properties(clangEdit PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS clangEdit )
 list(APPEND _IMPORT_CHECK_FILES_FOR_clangEdit "${_IMPORT_PREFIX}/lib/libclangEdit.a" )
 
+# Import target "clangExtractAPI" for configuration "Release"
+set_property(TARGET clangExtractAPI APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(clangExtractAPI PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclangExtractAPI.a"
+  )
+
+list(APPEND _IMPORT_CHECK_TARGETS clangExtractAPI )
+list(APPEND _IMPORT_CHECK_FILES_FOR_clangExtractAPI "${_IMPORT_PREFIX}/lib/libclangExtractAPI.a" )
+
 # Import target "clangRewrite" for configuration "Release"
 set_property(TARGET clangRewrite APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(clangRewrite PROPERTIES
@@ -254,16 +264,6 @@ set_target_properties(clangToolingSyntax PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS clangToolingSyntax )
 list(APPEND _IMPORT_CHECK_FILES_FOR_clangToolingSyntax "${_IMPORT_PREFIX}/lib/libclangToolingSyntax.a" )
-
-# Import target "clangToolingSyntaxPseudo" for configuration "Release"
-set_property(TARGET clangToolingSyntaxPseudo APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(clangToolingSyntaxPseudo PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libclangToolingSyntaxPseudo.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS clangToolingSyntaxPseudo )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clangToolingSyntaxPseudo "${_IMPORT_PREFIX}/lib/libclangToolingSyntaxPseudo.a" )
 
 # Import target "clangDependencyScanning" for configuration "Release"
 set_property(TARGET clangDependencyScanning APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -467,15 +467,6 @@ set_target_properties(clang-repl PROPERTIES
 
 list(APPEND _IMPORT_CHECK_TARGETS clang-repl )
 list(APPEND _IMPORT_CHECK_FILES_FOR_clang-repl "${_IMPORT_PREFIX}/bin/clang-repl" )
-
-# Import target "clang-pseudo" for configuration "Release"
-set_property(TARGET clang-pseudo APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(clang-pseudo PROPERTIES
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/clang-pseudo"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS clang-pseudo )
-list(APPEND _IMPORT_CHECK_FILES_FOR_clang-pseudo "${_IMPORT_PREFIX}/bin/clang-pseudo" )
 
 # Import target "clang-rename" for configuration "Release"
 set_property(TARGET clang-rename APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
